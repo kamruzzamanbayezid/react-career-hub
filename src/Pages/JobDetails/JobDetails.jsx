@@ -3,16 +3,17 @@ import { SlLocationPin } from "react-icons/sl";
 import { AiOutlineDollarCircle } from "react-icons/ai";
 import { MdOutlineSubtitles, MdPhone, MdOutlineEmail } from "react-icons/md";
 import { addAppliedJobsToLocalStorage } from "../../Utilities/Localstorage";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const JobDetails = () => {
 
       const jobDetails = useLoaderData();
-      // console.log(jobDetails);
+
       const { id } = useParams();
 
       const job = jobDetails.find(job => job.id == id);
-      // console.log(job);
 
       const { job_description, job_responsibility, educational_requirements, experiences, salary, job_title, contact_information } = job;
 
@@ -23,6 +24,7 @@ const JobDetails = () => {
 
       const handleApplyNow = () => {
             addAppliedJobsToLocalStorage(id);
+            toast('You Successfully Applied For this JOB!!')
       }
 
       return (
@@ -68,6 +70,7 @@ const JobDetails = () => {
                               </div>
                         </div>
                   </div>
+                  <ToastContainer></ToastContainer>
             </div>
       );
 };

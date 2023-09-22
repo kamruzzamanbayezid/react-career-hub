@@ -8,7 +8,7 @@ const FeaturedJob = ({ featuredJob }) => {
       const {id, logo, job_title, company_name, remote_or_onsite, job_type, location, salary } = featuredJob;
 
       return (
-            <div className='border border-[#E8E8E8] rounded-lg p-10'>
+            <div className='border max-w-7xl mx-auto border-[#E8E8E8] rounded-lg p-10'>
                   <img className='mb-7' src={logo} alt="logo" />
                   <h3 className='text-[#474747] text-2xl font-extrabold mb-2'>{job_title}</h3>
                   <p className='text-[#757575] text-xl font-semibold mb-4'>{company_name}</p>
@@ -16,7 +16,7 @@ const FeaturedJob = ({ featuredJob }) => {
                         <button className='text-[#7E90FE] rounded py-2 px-5 border border-[#7E90FE] font-extrabold'>{remote_or_onsite}</button>
                         <button className='text-[#7E90FE] rounded py-2 px-5 ml-4 border border-[#7E90FE] font-extrabold'>{job_type}</button>
                   </div>
-                  <div className='flex gap-6 mb-6'>
+                  <div className='flex lg:flex-row flex-col gap-6 mb-6'>
                         <div className='flex items-center gap-2'>
                               <span className='text-2xl'><SlLocationPin></SlLocationPin></span>
                               <span className='text-[#757575] text-xl'>{location}</span>
