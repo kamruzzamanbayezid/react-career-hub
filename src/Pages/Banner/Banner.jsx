@@ -11,7 +11,7 @@ const Banner = () => {
                               <button className="btn btn-primary">Get Started</button>
                         </div>
                         <div className="lg:w-1/2 ">
-                              <img className="w-4/5 mx-auto" src="../../../public/assets/images/user.png" alt="" />
+                              <img className="w-4/5 mx-auto" src="/assets/images/user.png" alt="" />
                         </div>
                   </div>
             </div>

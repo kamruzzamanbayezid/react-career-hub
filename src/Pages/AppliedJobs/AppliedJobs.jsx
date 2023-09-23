@@ -9,14 +9,14 @@ const AppliedJobs = () => {
       const [displayJobs, setDisplayJobs] = useState([]);
 
       const availableJobs = useLoaderData();
-
+      console.log(availableJobs);
       useEffect(() => {
             if (availableJobs.length > 0) {
                   const appliedJobs = getAppliedJobsFromLocalStorage();
 
                   let totalAppliedJobs = [];
                   for (let id of appliedJobs) {
-                        const appliedJob = availableJobs.find(job => job.id == id);
+                        const appliedJob = availableJobs.find(job => job.id === parseInt(id));
 
                         if (appliedJob) {
                               totalAppliedJobs.push(appliedJob);
